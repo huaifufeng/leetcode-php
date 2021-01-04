@@ -3,11 +3,6 @@
 /**
  * https://leetcode-cn.com/problems/two-sum/submissions/
  *
- * 1、两数之和
- *
- */
-
-/**
  * @param Integer[] $nums
  * @param Integer $target
  * @return Integer[]
