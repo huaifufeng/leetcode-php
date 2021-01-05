@@ -1,5 +1,15 @@
 <?php
-require "problems/3.longest-substring-without-repeating-characters.php";
+$fileList = scandir("problems/");
 
-$max = lengthOfLongestSubstring(" s");
-print_r($max);
+foreach ($fileList as $file) {
+    if ($file == "." || $file == "..") {
+        continue;
+    }
+
+    require "problems/" . $file;
+}
+
+
+$res = findMedianSortedArrays([1,3], [2,3]);
+
+var_dump($res);
