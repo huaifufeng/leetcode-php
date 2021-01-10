@@ -10,6 +10,9 @@ foreach ($fileList as $file) {
 }
 
 
-$res = findMedianSortedArrays([1,3], [2,3]);
+$res1 = longestPalindrome("babad");
+$res2 = longestPalindrome("cbbd");
+$res3 = longestPalindrome("a");
+$res4 = longestPalindrome("ac");
 
-var_dump($res);
+var_dump($res1,$res2, $res3, $res4);
