@@ -10,9 +10,6 @@ foreach ($fileList as $file) {
 }
 
 
-$res1 = longestPalindrome("babad");
-$res2 = longestPalindrome("cbbd");
-$res3 = longestPalindrome("a");
-$res4 = longestPalindrome("ac");
+$res4 = prefixesDivBy5([1,0,1,1,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,1,1,1,0,1,1,0,1,0,0,0,0,0,0,1,0,1,1,1,0,0,1,0]);
 
-var_dump($res1,$res2, $res3, $res4);
+var_dump($res4);
