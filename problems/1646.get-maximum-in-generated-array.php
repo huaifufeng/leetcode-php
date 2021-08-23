@@ -7,24 +7,14 @@
  */
 function getMaximumGenerated($n)
 {
-    if ($n == 0) {
-        return 0;
+    if ($n == 0 || $n == 1) {
+        return $n;
     }
-
-    if ($n == 1) {
-        return 1;
-    }
-
     $allMaps = [0, 1];
-    $max = 0;
+    $max = 1;
     for ($i = 2; $i <= $n; $i++) {
-        $remainder = $i % 2;
         $index = $i >> 1;
-        if ($remainder == 0) {
-            $allMaps[$i] = $allMaps[$index];
-        } else {
-            $allMaps[$i] = $allMaps[$index] + $allMaps[$index+1];
-        }
+        $allMaps[$i] = $allMaps[$index] + ($i%2)*$allMaps[$index+1];
 
         if ($allMaps[$i] > $max) {
             $max = $allMaps[$i];
