@@ -6,14 +6,9 @@
  * @return Integer[]
  */
 function runningSum($nums) {
-    $runningSums = [];
-    foreach ($nums as $index => $value) {
-        if ($index == 0) {
-            $runningSums[] = $value;
-        } else {
-            $runningSums[] = $runningSums[$index-1] + $value;
-        }
+    for ($i = 1; $i < count($nums); $i++) {
+        $nums[$i] = $nums[$i-1] + $nums[$i];
     }
 
-    return $runningSums;
+    return $nums;
 }
