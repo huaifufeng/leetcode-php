@@ -23,16 +23,6 @@ foreach ($fileList as $file) {
 }
 require "./common.php";
 
-
-$head =  new ListNode(1);
-$node1 = new ListNode(2);
-$head->next = $node1;
-$node2 = new ListNode(3);
-$node1->next = $node2;
-$node3 = new ListNode(4);
-$node2->next = $node3;
-$node4 = new ListNode(5);
-$node3->next = $node4;
-$res = getKthFromEnd1($head, 2);
+$res = balancedStringSplit("RLRRLLRLRL");
 
 var_dump($res);
